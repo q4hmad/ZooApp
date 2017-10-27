@@ -21,13 +21,14 @@ export class AppComponent {
 
  selectedAnimal = null;
 
+ addAnimal(newAnimalFromChild: Animal) {
+   this.masterAnimalList.push(newAnimalFromChild);
+ }
+
  editAnimal(clickedAnimal) {
    this.selectedAnimal = clickedAnimal
  }
 
-addAnimal(newAnimalFromChild: Animal) {
-  this.masterAnimalList.push(newAnimalFromChild);
-}
 
 
  finishedEditing() {

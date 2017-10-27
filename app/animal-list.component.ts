@@ -7,7 +7,7 @@ import { Animal } from './animal.model';
   <select (change)="onChange($event.target.value)">
       <option value="allAnimals">All Animals</option>
       <option value="youngAnimals">Young Animals</option>
-      <option value="matureAnimals" selected="selected">Mature(age 2 or above) Animals</option>
+      <option value="matureAnimals" selected="selected">Mature Animals</option>
     </select>
     <ul>
       <li  (click)="maturity(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">Species: {{currentAnimal.species}}
@@ -21,7 +21,7 @@ import { Animal } from './animal.model';
         <li>Likes: {{currentAnimal.likes}}</li>
         <li>Dislikes: {{currentAnimal.dislikes}}</li>
         <button class="btn btn-info" (click)="editButtonHasBeenClicked(currentAnimal.isMature())">Edit!</button>
-        <button class= "btn btn-info" click()
+        
       </ul>
       </li>
     </ul>
@@ -29,9 +29,10 @@ import { Animal } from './animal.model';
 })
 
 export class AnimalListComponent {
-  filterByMaturity: string = "stillYoung";
+  filterByMaturity: string = "notMature";
 
-  @input() childAnimalList: Animal[];
+
+  @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
   editButtonHasBeenClicked(animalToEdit: Animal) {
