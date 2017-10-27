@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container">
-    <h1>Zoo Animal Tracking App</h1>
+    <h1>Zoo Animal Tracker</h1>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
   </div>
   `
@@ -19,5 +19,19 @@ export class AppComponent {
    new Animal('Northwest Black Tailed Deer', "Tinkerbell", 8, 'Herbivore', 'Northern Trail', 2, 'Female', 'Delicate roots and leaves', 'Loud Noises')
  ];
 
+ selectedAnimal = null;
+
+ editAnimal(clickedAnimal) {
+   this.selectedAnimal = clickedAnimal
+ }
+
+addAnimal(newAnimalFromChild: Animal) {
+  this.masterAnimalList.push(newAnimalFromChild);
+}
+
+
+ finishedEditing() {
+   this.selectedAnimal = null;
+ }
 
 }
