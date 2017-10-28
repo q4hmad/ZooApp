@@ -11,14 +11,14 @@ export class MaturityPipe implements PipeTransform {
 
   transform(input: Animal[], desiredMaturity) {
     let output: Animal[] = [];
-    if(desiredMaturity === "notMature") {
+    if(desiredMaturity === "youngAnimals") {
       for (let i = 0; i < input.length; i++) {
         if (input[i].mature === false) {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredMaturity === "mature") {
+    } else if (desiredMaturity === "matureAnimals") {
       for (let i = 0; i < input.length; i++) {
         if (input[i].mature === true) {
           output.push(input[i]);
