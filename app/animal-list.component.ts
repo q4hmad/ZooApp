@@ -6,11 +6,11 @@ import { Animal } from './animal.model';
   template: `
   <select (change)="onChange($event.target.value)">
       <option value="allAnimals">All Animals</option>
-      <option value="matureAnimals">Young Animals</option>
-      <option value="youngAnimals" selected="selected">Mature Animals</option>
+      <option value="youngAnimals">Young Animals</option>
+      <option value="matureAnimals" selected="selected">Mature  Animals</option>
     </select>
     <ul>
-      <li  (click)="(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">Species: {{currentAnimal.species}}
+      <li  [class]="isMature(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">Species: {{currentAnimal.species}}
       <ul>
         <li>Name: {{currentAnimal.name}}</li>
         <li>Age: {{currentAnimal.age}}</li>
@@ -20,11 +20,10 @@ import { Animal } from './animal.model';
         <li>Sex: {{currentAnimal.sex}}</li>
         <li>Likes: {{currentAnimal.likes}}</li>
         <li>Dislikes: {{currentAnimal.dislikes}}</li>
-        <button class="btn btn-info" (click)="editButtonHasBeenClicked(currentAnimal.isMature())">Edit!</button>
-
+        <button class="btn btn-info"  (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
       </ul>
-      </li>
-    </ul>
+    </li>
+  </ul>
   `
 })
 
@@ -42,4 +41,16 @@ export class AnimalListComponent {
   onChange(optionFromMenu) {
     this.filterByMaturity = optionFromMenu;
   }
+
+
+  isMature(currentAnimal){
+      if (currentAnimal.age >= 2){
+      currentAnimal.mature = true;
+    } else {
+        currentAnimal.mature = false;
+      }
+    }
+
+
+
 }
