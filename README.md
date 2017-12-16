@@ -57,8 +57,10 @@ If you have any updates or suggestions please contact q4hmad@gmail.com or make a
 * JavaScript
 * Angular 2
 * Node
+* Typescript
 * Bower
-* License
+* HTML
+
 
 ### License
 
