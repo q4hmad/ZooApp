@@ -30,7 +30,7 @@ _This application allows users to store and edit information about individual zo
 
 ### Setup/Installation Requirements
 
-1. _ `$ git clone [https://github.com/q4hmad/ZooApp](https://github.com/q4hmad/ZooApp)
+1. _ `$ git clone this [repo](https://github.com/q4hmad/ZooApp)
 
 1. _`$ cd portland-zoo/`_
 
