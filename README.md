@@ -26,44 +26,7 @@ _This application allows users to store and edit information about individual zo
 * _A user can view all animals, only young animals (less than 2 years of age), or only mature animals (2 years of age and older)._
 * _A user can click an animal to edit its name, age or caretakers._
 
-Specifications
 
-### Spec	
-* _Input:	Log a new animal and see it in the list._
-  ** _Species: "Arctic Fox"_
-  ** _Name: "Moon"_
-  ** _Age: 2 
-  ** Diet: "Carnivore"
-  ** Location: "Northern Trail"
-  ** Caretakers: 5
-  ** Sex: "Female"
-  ** Likes: "Cool shade"
-  ** Dislikes: "Loud noises"
----------
-
----------
-Species: "Ocelot"
-Name: "Prince"
-Age: 4
-Diet: "Carnivore"
-Location: "Tropical Rain Forest Building"
-Caretakers: 6
-Sex: "Male"
-Likes: "Laying in the sunshine"
-Dislikes: "Toys that are not rope-based"
----------
-
----------
-Species: "Northwest Black Tailed Deer"
-Name: "Tinkerbell"
-Age: 8
-Diet: "Herbivore"
-Location: "Northern Trail"
-Caretakers: 2
-Sex: "Female"
-Likes: "Delicate roots and leaves"
-Dislikes: "Loud Noises"
----------
 
 ### Setup/Installation Requirements
 
