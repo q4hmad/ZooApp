@@ -6,7 +6,7 @@
 
 ### Description
 
-_This application allows users to store and edit information about individual zoo animals, including name, species, age, and more. Animals can be viewed in a list, which can be filtered by animal age._
+_This application allows allow zoo workers to track animals, record details about them, and assign caretakers to them to store and edit information about individual zoo animals, including name, species, age, and more. Animals can be viewed in a list, which can be filtered by animal age._
 
 ### Setup/Installation Requirements
 
